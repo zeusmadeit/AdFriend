@@ -30,11 +30,11 @@ hideAdsStyle.textContent = `
   [class*="Sponsor"],
   [id*="sponsor"],
   [id*="Sponsor"],
-  .prop_native1,
-  [id*="container-"] { 
-    display: none !important; 
-  }
+  .prop_native1
 `;
+// [id*="container-"] { 
+//   display: none !important; 
+// }
 document.documentElement.appendChild(hideAdsStyle);
 
 // Prevent ad scripts from loading
@@ -54,8 +54,9 @@ const observer = new MutationObserver((mutations) => {
         if (node.tagName === 'DIV' && 
             (node.className?.includes('ad') || 
              node.id?.includes('ad') ||
-             node.className?.includes('prop_native') ||
-             node.id?.includes('container-'))
+             node.className?.includes('prop_native')
+            //  node.id?.includes('container-')
+            )
         ) {
           replaceWithMotivationalContent(node);
         }
@@ -110,7 +111,8 @@ function createMotivationalWidget() {
 
 // Clean up any ads that might have slipped through
 document.addEventListener('DOMContentLoaded', () => {
-  const adElements = document.querySelectorAll('[class*="ad"], [id*="ad"], [class*="sponsor"], [id*="sponsor"], .prop_native1, [id*="container-"]');
+  // const adElements = document.querySelectorAll('[class*="ad"], [id*="ad"], [class*="sponsor"], [id*="sponsor"], .prop_native1, [id*="container-"]');
+  const adElements = document.querySelectorAll('[class*="ad"], [id*="ad"], [class*="sponsor"], [id*="sponsor"], .prop_native1');
   adElements.forEach(element => {
     replaceWithMotivationalContent(element);
   });
