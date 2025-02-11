@@ -1,0 +1,45 @@
+.adfriend-widget {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.quote-content {
+  margin-bottom: 15px;
+}
+
+.quote-text {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.quote-author {
+  font-size: 14px;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.refresh-quote {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.refresh-quote:hover {
+  background-color: #2980b9;
+}
